@@ -15,7 +15,7 @@ VOLUME /tmp
 ADD target/robin-web-1.0-SNAPSHOT.jar robinDemo.jar
 
 #启动容器时的进程
-ENTRYPOINT ["java","-jar","/provider.jar"]
+ENTRYPOINT ["java","-jar","/robinDemo.jar"]
 
 #暴露8088端口,这个端口对应的是服务本身的端口
 EXPOSE 1018
