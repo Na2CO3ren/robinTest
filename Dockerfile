@@ -13,6 +13,9 @@ VOLUME /tmp
 
 ARG JAR_FILE
 COPY ${JAR_FILE} /app.jar
+
+COPY /app.jar /abcd.jar
+
 ENTRYPOINT ["java","-jar","/app.jar"]
 
 ##应用构建成功后的jar文件被复制到镜像内，名字也改成了app.jar
