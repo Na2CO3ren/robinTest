@@ -38,6 +38,24 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <!-- 指定maven编译的jdk版本 -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <!--你的jdk地址-->
+                    <executable>C:\Program Files\Java\jdk1.8.0_201/bin/javac</executable>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 
 
 </project>

@@ -14,6 +14,7 @@ VOLUME /tmp
 COPY ./web ./ddd
 
 
+
 #应用构建成功后的jar文件被复制到镜像内，名字也改成了app.jar
 COPY /robin-web-1.0-SNAPSHOT.jar robinDemo.jar
 
