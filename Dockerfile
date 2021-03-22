@@ -12,9 +12,9 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 VOLUME /tmp
 
 ARG JAR_FILE
-COPY ${JAR_FILE} /app.jar
+COPY ${JAR_FILE} ./app.jar
 
-COPY /app.jar /abcd.jar
+COPY ./app.jar /abcd.jar
 
 ENTRYPOINT ["java","-jar","/app.jar"]
 
