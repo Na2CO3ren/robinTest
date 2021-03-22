@@ -12,8 +12,8 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 VOLUME /tmp
 
 ARG JAR_FILE
-COPY ${JAR_FILE} /usr/app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/app.jar"]
+COPY ${JAR_FILE} /app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 
 ##应用构建成功后的jar文件被复制到镜像内，名字也改成了app.jar
 #COPY /robin-web-1.0-SNAPSHOT.jar robinDemo.jar
