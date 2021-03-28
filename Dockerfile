@@ -11,10 +11,13 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 #声明一个挂载点，容器内此路径会对应宿主机的某个文件夹
 VOLUME /tmp
 
+RUN mvn clean package
+
+
 ARG JAR_FILE
 COPY ${JAR_FILE} ./app.jar
 
-COPY ./web /testweb
+COPY ./target /testweb
 
 
 COPY ./web/robin-web-1.0-SNAPSHOT.jar /abcd.jar
