@@ -40,53 +40,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <!-- 指定maven编译的jdk版本 -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <verbose>true</verbose>
-                    <fork>true</fork>
-                    <!--你的jdk地址-->
-                    <executable>C:\Program Files\Java\jdk1.8.0_201/bin/javac</executable>
-                </configuration>
-            </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>com.spotify</groupId>-->
-<!--                <artifactId>docker-maven-plugin</artifactId>-->
-
-<!--                &lt;!&ndash;将插件绑定在某个phase执行&ndash;&gt;-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>build-image</id>-->
-<!--                        &lt;!&ndash;将插件绑定在package这个phase上。也就是说，用户只需执行mvn package ，就会自动执行mvn docker:build&ndash;&gt;-->
-<!--                        <phase>install</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>build</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-
-<!--                <configuration>-->
-
-<!--                    <imageName>${project.artifactId}</imageName>-->
-<!--                    <imageTags>latest</imageTags>-->
-<!--                    &lt;!&ndash; 指定 Dockerfile 路径&ndash;&gt;-->
-<!--                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
-<!--                    &lt;!&ndash; 这里是复制 jar 包到 docker 容器指定目录配置 &ndash;&gt;-->
-<!--                    <resources>-->
-<!--                        <resource>-->
-<!--                            <targetPath>/</targetPath>-->
-<!--                            &lt;!&ndash;jar 包所在的路径  此处配置的 即对应 target 目录&ndash;&gt;-->
-<!--                            <directory>${project.build.directory}</directory>-->
-<!--                            &lt;!&ndash; 需要包含的 jar包 ，这里对应的是 Dockerfile中添加的文件名　&ndash;&gt;-->
-<!--                            <include>${project.build.finalName}.jar</include>-->
-<!--                        </resource>-->
-<!--                    </resources>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
 
         </plugins>
     </build>
