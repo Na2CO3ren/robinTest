@@ -14,7 +14,10 @@ VOLUME /tmp
 ARG JAR_FILE
 COPY ${JAR_FILE} ./app.jar
 
-COPY ./robin-web-1.0-SNAPSHOT.jar /abcd.jar
+COPY ./web /testweb
+
+
+COPY ./web/robin-web-1.0-SNAPSHOT.jar /abcd.jar
 
 
 COPY ./app.jar /abcd.jar
