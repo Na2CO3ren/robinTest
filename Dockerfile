@@ -17,7 +17,7 @@ FROM openjdk:8-jre-alpine
 # copy jar from the first stage
 COPY --from=builder web/target/robin-web-1.0-SNAPSHOT.jar my-app-1.0-SNAPSHOT.jar
 
-EXPOSE 1018
+EXPOSE 80
 
 CMD java -jar my-app-1.0-SNAPSHOT.jar  --spring.profiles.active=daily
 
