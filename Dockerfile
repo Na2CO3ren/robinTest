@@ -20,8 +20,6 @@ COPY --from=builder web/target/robin-web-1.0-SNAPSHOT.jar my-app-1.0-SNAPSHOT.ja
 EXPOSE 1018
 
 CMD java -jar my-app-1.0-SNAPSHOT.jar  --spring.profiles.active=daily
-["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
-
 
 #
 #### 基础镜像，使用alpine操作系统，openjkd使用8u201
